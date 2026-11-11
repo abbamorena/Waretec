@@ -1,0 +1,327 @@
+/* Variables de Diseño Basadas en el Manual de Marca */
+:root {
+    --bg-dark-blue: #163366;      /* Azul principal */
+    --accent-blue: #234f99;       /* Azul secundario */
+    --light-blue: #e8f0fe;        /* Fondo claro para contraste */
+    --bg-footer: #11254a;          /* Azul profundo para footer */
+    --text-white: #ffffff;
+    --text-dark: #222222;
+    --text-muted: #555555;
+    --font-heading: 'Playfair Display', serif; /* Serif elegante para títulos */
+    --font-body: 'Roboto', sans-serif;         /* Sans-serif para lectura */
+    --border-radius: 8px;
+    --gap-standard: 20px;
+    --gap-large: 30px;
+}
+
+/* Reseteo General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--bg-dark-blue);
+}
+
+/* Barra de Navegación con Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-dark-blue);
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    color: var(--text-white);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a3c2ff;
+}
+
+/* Sección Hero (Página Principal) con Flexbox */
+.hero {
+    background-color: var(--bg-dark-blue);
+    color: var(--text-white);
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 80px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('minimal-background-dark-blue-and-light-blue-with-a-line-suitable-for-design-needs-display-website-ui-and-others-free-photo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+
+.hero-desc {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--text-white);
+    color: var(--bg-dark-blue);
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--light-blue);
+    transform: translateY(-2px);
+}
+
+.hero-brand {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.brand-box {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.word-highlight {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.word-highlight::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Secciones de Fondo Unificado */
+.nosotros, .servicios, .conocenos, .contacto-section, .galeria-section {
+    background-image: url('fondo-azul-elegante-abstracto-espacio-texto_1017-46767.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.nosotros, .conocenos {
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    color: var(--text-white);
+    margin-bottom: 40px;
+}
+
+/* Grilla con Flexbox para Misión/Visión */
+.mision-vision-flex {
+    display: flex;
+    gap: var(--gap-large);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 300px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--bg-dark-blue);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--bg-dark-blue);
+    margin-bottom: 15px;
+}
+
+/* Estilos para el Video Institucional */
+.video-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.empresa-video {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    outline: none;
+}
+
+/* Tarjetas de Servicios con Flexbox */
+.services-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-large);
+    justify-content: center;
+}
+
+.service-item {
+    flex: 1 1 280px;
+    max-width: 350px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-item .icon {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.service-item .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    color: var(--bg-dark-blue);
+}
+
+/* Footer estructurado con Flexbox */
+footer {
+    background-color: var(--bg-footer);
+    color: rgba(255,255,255,0.8);
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-info, .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Adaptabilidad Móvil */
+@media (max-width: 768px) {
+    .navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
+    .hero { flex-direction: column; text-align: center; padding: 40px 20px; gap: 30px; }
+    .hero-content, .hero-brand { max-width: 100%; }
+    .footer-content { flex-direction: column; text-align: center; }
+}
