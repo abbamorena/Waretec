@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Waretec</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header con Menú Navegación -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="Logo_empresa.png" alt="Waretec Logo" class="logo-img">
+            <span class="logo-text">Waretec</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="galeria.html" class="active">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="galeria-section">
+        <div class="container">
+            <h1>Catálogo de Soluciones Web</h1>
+            <p class="galeria-subtitle">Explorá los diseños y tipos de sitios que desarrollamos para potenciar tu Pyme.</p>
+
+            <!-- Grilla de Tarjetas usando Flexbox -->
+            <div class="galeria-flex">
+                
+                <article class="galeria-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500" alt="Landing Page Pyme" class="galeria-img">
+                    <div class="galeria-content">
+                        <h2>Sitio Landing Page</h2>
+                        <p>Ideal para presentar tu negocio rápidamente con secciones claras, formulario de contacto y llamados a la acción inmediatos.</p>
+                        <div class="card-action">
+                            <span class="tag-plan">Plan Inicial</span>
+                            <a href="contacto.html" class="btn-card">Consultar &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="galeria-card">
+                    <img src="https://images.unsplash.com/photo-1556742049-0a670f4a4591?q=80&w=500" alt="Tienda E-commerce" class="galeria-img">
+                    <div class="galeria-content">
+                        <h3>E-Commerce / Tienda Online</h3>
+                        <p>Catálogo interactivo de productos, pasarela de pagos integrada y gestión de pedidos optimizada para tu comercio.</p>
+                        <div class="card-action">
+                            <span class="tag-plan">Plan Avanzado</span>
+                            <a href="contacto.html" class="btn-card">Consultar &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="galeria-card">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=500" alt="Web Corporativa" class="galeria-img">
+                    <div class="galeria-content">
+                        <h3>Web Institucional / Pyme</h3>
+                        <p>Sitio multipágina corporativo completo para empresas que buscan proyectar solidez, mostrar historia, servicios y equipo.</p>
+                        <div class="card-action">
+                            <span class="tag-plan">Plan Pro</span>
+                            <a href="contacto.html" class="btn-card">Consultar &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="galeria-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500" alt="Mantenimiento Web" class="galeria-img">
+                    <div class="galeria-content">
+                        <h3>Servicio de Mantenimiento</h3>
+                        <p>Actualización continua de contenidos, optimización de velocidad, seguridad y mejoras tecnológicas periódicas.</p>
+                        <div class="card-action">
+                            <span class="tag-plan">Suscripción</span>
+                            <a href="contacto.html" class="btn-card">Consultar &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>Waretec</strong> - Soluciones Digitales para Pymes</p>
+                <p>&copy; 2026 Waretec. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-contact">
+                <p>📍 Córdoba, Argentina</p>
+                <p>✉️ contacto@waretec.com</p>
+                <p>📞 +54 351 123-4567</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
